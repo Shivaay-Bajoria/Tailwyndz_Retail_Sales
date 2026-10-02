@@ -1,0 +1,132 @@
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ==========================================
+# Environment / Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Jupyter
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# Raw Dataset
+# ==========================================
+# Do NOT commit the original Breakfast at the Frat dataset
+data/raw/*
+!data/raw/.gitkeep
+
+# ==========================================
+# Processed Data
+# ==========================================
+# Large intermediate datasets
+data/processed/*
+!data/processed/.gitkeep
+
+# ==========================================
+# Generated Outputs
+# ==========================================
+
+# Ignore temporary/intermediate output files
+outputs/*.parquet
+outputs/*.pkl
+outputs/*.pickle
+outputs/*.joblib
+outputs/*.tmp
+
+# Keep important assessment deliverables
+!outputs/forecasts.csv
+!outputs/cv_results.csv
+!outputs/ablation_results.csv
+!outputs/elasticity_estimates.csv
+!outputs/promo_lift.csv
+!outputs/interval_coverage.csv
+!outputs/segment_metrics.csv
+
+# Keep scenario results
+!outputs/scenarios/
+!outputs/scenarios/*.csv
+
+# Keep driver attribution
+!outputs/driver_attribution/
+!outputs/driver_attribution/*.csv
+
+# Keep figures used in the report/presentation
+!outputs/figures/
+!outputs/figures/*.png
+!outputs/figures/*.jpg
+!outputs/figures/*.jpeg
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+logs/
+
+# ==========================================
+# OS Files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# IDE / Editors
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# Python Testing / Tooling
+# ==========================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Build / Packaging
+# ==========================================
+build/
+dist/
+*.egg-info/
+
+# ==========================================
+# Temporary Files
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# ==========================================
+# Large ML / Model Files
+# ==========================================
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.safetensors

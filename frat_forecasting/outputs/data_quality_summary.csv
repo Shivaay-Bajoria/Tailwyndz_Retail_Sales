@@ -1,0 +1,22 @@
+check,value,note
+Rows,524950,
+Weeks,156,2009-01-14 to 2012-01-04
+Stores in transactions,77,
+UPCs in transactions,55,58 in product lookup
+Store-UPC series,3909,
+Duplicate week-store-UPC rows,0,
+UPCs missing from product lookup,0,
+Stores missing from store lookup,0,
+Stores with conflicting tier labels,2,"first label kept: 4503, 17627"
+Missing price,23,refilled from the same series
+Missing base price,185,refilled from the same series
+Price = 0,1,"treated as invalid, refilled"
+Units = 0 with visits > 0,5,excluded from training and evaluation
+Visits > units (impossible),2309,flagged only
+Units per visit above threshold,48,"flagged outlier, kept"
+Visits per household above threshold,293,"flagged outlier, kept"
+Price above base price,6047,kept; discount depth floored at 0
+Price more than 10% above base price,1002,
+Promo flag set but no price cut,14384,expected for feature/display
+Price cut over 5% with no promo flag,0,
+Rows in a full panel,660660,actual rows are 79% of this

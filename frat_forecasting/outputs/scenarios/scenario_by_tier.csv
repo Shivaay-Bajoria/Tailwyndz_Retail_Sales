@@ -1,0 +1,34 @@
+scenario,method,tier,units_change_pct,revenue_change_pct
+everyday price -10%,"elasticity (spec B, by category)",Mainstream,0.20970390212520895,0.1071317847519877
+everyday price -10%,"elasticity (spec B, by category)",Upscale,0.20604950354474383,0.10424916247194904
+everyday price -10%,"elasticity (spec B, by category)",Value,0.21802613316092256,0.11175858933408644
+everyday price -5%,"elasticity (spec B, by category)",Mainstream,0.09673417841222931,0.05027759358940709
+everyday price -5%,"elasticity (spec B, by category)",Upscale,0.09511769623174726,0.04892464649271533
+everyday price -5%,"elasticity (spec B, by category)",Value,0.1004248589454364,0.052468357343105065
+everyday price +5%,"elasticity (spec B, by category)",Mainstream,-0.0835486098265229,-0.04478401241164154
+everyday price +5%,"elasticity (spec B, by category)",Upscale,-0.08225933752357106,-0.0435803250485568
+everyday price +5%,"elasticity (spec B, by category)",Value,-0.08650542359392177,-0.04676282769680895
+everyday price +10%,"elasticity (spec B, by category)",Mainstream,-0.15626892544017834,-0.08493399018395187
+everyday price +10%,"elasticity (spec B, by category)",Upscale,-0.15394708758879894,-0.08265374851819685
+everyday price +10%,"elasticity (spec B, by category)",Value,-0.16160430484811483,-0.0887073053182953
+sale tag 5% off (un-promoted rows),LightGBM,Mainstream,0.06783075090530044,0.05561823321266135
+sale tag 5% off (un-promoted rows),LightGBM,Upscale,0.06277583118264674,0.04548918540449476
+sale tag 5% off (un-promoted rows),LightGBM,Value,0.0683190861541243,0.05315756726843612
+sale tag 10% off (un-promoted rows),LightGBM,Mainstream,0.053853860482502736,0.00953380455075159
+sale tag 10% off (un-promoted rows),LightGBM,Upscale,0.049207239032184935,-0.0015405675630461024
+sale tag 10% off (un-promoted rows),LightGBM,Value,0.05115701281042151,0.0026320454325632348
+sale tag 15% off (un-promoted rows),LightGBM,Mainstream,0.13538197296990928,0.05615856033659461
+sale tag 15% off (un-promoted rows),LightGBM,Upscale,0.12903278510159155,0.04228485402639959
+sale tag 15% off (un-promoted rows),LightGBM,Value,0.13334107758262337,0.04717800136899952
+sale tag 20% off (un-promoted rows),LightGBM,Mainstream,0.16204452176120876,0.04208630618378395
+sale tag 20% off (un-promoted rows),LightGBM,Upscale,0.15910216044043235,0.03212724166540215
+sale tag 20% off (un-promoted rows),LightGBM,Value,0.15979380826149048,0.03325408580712841
+add display (no price cut),LightGBM,Mainstream,0.21574572541335524,0.23717311255258267
+add display (no price cut),LightGBM,Upscale,0.18506636703811852,0.20162485328171864
+add display (no price cut),LightGBM,Value,0.23882826651650801,0.25746854779030914
+add circular feature (no price cut),LightGBM,Mainstream,0.32676791386429427,0.35566927968501116
+add circular feature (no price cut),LightGBM,Upscale,0.2929844132294108,0.3145883890874803
+add circular feature (no price cut),LightGBM,Value,0.32006953055409015,0.351391771399014
+feature + display (no price cut),LightGBM,Mainstream,0.8193373181692718,0.8722784762009024
+feature + display (no price cut),LightGBM,Upscale,0.6828799279593829,0.7223169563287348
+feature + display (no price cut),LightGBM,Value,0.8602013888373485,0.9179594186085975

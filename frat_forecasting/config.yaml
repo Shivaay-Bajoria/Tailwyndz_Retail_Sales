@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------- paths
+paths:
+  raw_xlsx: data/raw/dunnhumby - Breakfast at the Frat.xlsx
+  processed_dir: data/processed
+  output_dir: outputs
+
+# ---------------------------------------------------------------- general
+seed: 42
+horizon: 13              # weeks to forecast (also the holdout length)
+
+# ---------------------------------------------------------------- data handling
+data:
+  excel_header_row: 1            # real header is on the 2nd row of each sheet
+  insert_missing_as_zero: true   # fill gaps inside a series' active span with zero units
+  train_on_inserted: true        # inserted zero rows may be used as training targets
+  outlier_units_per_visit: 6     # flag if units / visits above this
+  outlier_visits_per_hh: 3       # flag if visits / households above this
+
+# ---------------------------------------------------------------- validation
+validation:
+  n_cv_folds: 3                  # rolling-origin folds before the holdout
+  origin_stride: 8               # spacing (weeks) between training origins
+  min_origin: 12                 # earliest origin used for training rows
+
+# ---------------------------------------------------------------- model
+model:
+  lgbm:
+    n_estimators: 300
+    learning_rate: 0.08
+    num_leaves: 63
+    min_child_samples: 50
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    objective: tweedie
+    tweedie_variance_power: 1.2
+    n_jobs: -1
+
+# ---------------------------------------------------------------- intervals
+intervals:
+  alpha: 0.2                     # 80% prediction interval
+  quantile_estimators: 150
+
+# ---------------------------------------------------------------- ablation
+ablation:
+  enabled: true
+  n_estimators: 150
+  origins: [129, 142]            # folds used for the ablation study
+
+# ---------------------------------------------------------------- explanations
+explain:
+  sample_rows: 20000
+
+# ---------------------------------------------------------------- scenarios
+scenarios:
+  price_change_pcts: [-0.10, -0.05, 0.05, 0.10]   # everyday price changes (elasticity-based)
+  sale_tag_depths: [0.05, 0.10, 0.15, 0.20]       # temporary price reductions (model-based)
